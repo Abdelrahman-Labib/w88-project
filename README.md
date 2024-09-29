@@ -41,6 +41,12 @@ php artisan schedule:run
 php artisan queue:work
 ```
 
+# Running the Scheduler on the server with cronjob
+```bash
+* * * * * cd /w88-project && php artisan schedule:run >> /dev/null 2>&1
+```
+Make careful to (* * * * *) all the fields on the server cronjob to read from the Laravel Task Scheduling.
+
 ### API Endpoints
 
 - http://127.0.0.1:8000/api/products
